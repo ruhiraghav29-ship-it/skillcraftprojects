@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Landing Page</title>
+
+  <!-- Internal CSS -->
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background:#f4f6fb;
+    }
+
+    /* Header */
+    header{
+      background:#222;
+      color:#fff;
+      padding:15px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:22px;
+      font-weight:bold;
+    }
+
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      margin-left:20px;
+      font-size:16px;
+    }
+
+    .menu{
+      display:none;
+      font-size:24px;
+      cursor:pointer;
+    }
+
+    /* Hero Section */
+    .hero{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:60px 30px;
+    }
+
+    .hero-text{
+      max-width:500px;
+    }
+
+    .hero-text h1{
+      font-size:38px;
+      margin-bottom:15px;
+    }
+
+    .hero-text p{
+      font-size:16px;
+      margin-bottom:20px;
+      color:#555;
+    }
+
+    .hero-text button{
+      padding:10px 20px;
+      background:#222;
+      color:#fff;
+      border:none;
+      cursor:pointer;
+    }
+
+    .hero img{
+      width:280px;
+    }
+
+    /* Features */
+    .features{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      padding:40px 20px;
+    }
+
+    .box{
+      background:#fff;
+      width:260px;
+      padding:20px;
+      text-align:center;
+      box-shadow:0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .box h3{
+      margin-bottom:10px;
+    }
+
+    /* Footer */
+    footer{
+      background:#222;
+      color:#fff;
+      text-align:center;
+      padding:15px;
+      margin-top:20px;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      nav{
+        display:none;
+        flex-direction:column;
+        background:#222;
+        position:absolute;
+        top:60px;
+        right:0;
+        width:100%;
+        text-align:center;
+      }
+
+      nav a{
+        margin:10px 0;
+      }
+
+      .menu{
+        display:block;
+      }
+
+      .hero{
+        flex-direction:column;
+        text-align:center;
+      }
+
+      .hero img{
+        margin-top:20px;
+      }
+
+      .features{
+        flex-direction:column;
+        align-items:center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">MyWebsite</div>
+    <nav id="nav">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="menu" onclick="openMenu()">☰</div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to Our Website</h1>
+      <p>
+        This is a simple responsive landing page created using
+        only frontend technologies like HTML, CSS and JavaScript.
+      </p>
+      <button>Get Started</button>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="image">
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="box">
+      <h3>Easy</h3>
+      <p>Simple structure and easy to understand code.</p>
+    </div>
+    <div class="box">
+      <h3>Responsive</h3>
+      <p>Works properly on mobile, tablet and desktop.</p>
+    </div>
+    <div class="box">
+      <h3>Frontend</h3>
+      <p>Only HTML, CSS and JavaScript used.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Simple Landing Page Project</p>
+  </footer>
+
+  <!-- Internal JavaScript -->
+  <script>
+    function openMenu(){
+      var nav = document.getElementById("nav");
+
+      if(nav.style.display === "flex"){
+        nav.style.display = "none";
+      }else{
+        nav.style.display = "flex";
+      }
+    }
+  </script>
+
+</body>
+</html>
